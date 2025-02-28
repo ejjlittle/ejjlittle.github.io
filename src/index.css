@@ -5,10 +5,7 @@
   line-height: 1.5;
   font-weight: 400;
   cursor: none;
-
   color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.95);
-  background-color:rgb(256, 256, 256);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -30,6 +27,14 @@
   fill: #f7f8fa;
 }
 
+.hoverable {
+  width: 0;
+  white-space: nowrap;
+  cursor: none;
+  text-decoration: none;
+  color: inherit;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -41,7 +46,7 @@
 h1 {
   font-size: 3.5rem;
   font-weight: 900; 
- margin-bottom: 2rem;  
+ margin-bottom: 1rem;  
   line-height: 1;
 }
 
@@ -54,18 +59,30 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  font-weight: 700; 
+  font-weight: 300; 
   margin-bottom: 0.5rem; 
   line-height: 1;
 }
 
 h4 {
   font-size: 1.3rem;
-  font-weight: 600; 
+  font-weight: 300; 
+  margin-bottom: 0.5rem; 
+  line-height: 1;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 500; 
   margin-bottom: 0.5rem; 
   line-height: 1;
 }
 
 p{
-  padding-top: 1.0rem;
+  padding-top: 0.5rem;
+  margin-left: 4.0rem;
+}
+
+html {
+  scroll-behavior: smooth;
 }
