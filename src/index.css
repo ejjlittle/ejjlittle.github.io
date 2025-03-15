@@ -1,88 +1,89 @@
 @import "tailwindcss";
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  cursor: none;
-  color-scheme: light dark;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    cursor: none;
+    color-scheme: light dark;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+.nav-link.active,
+.nav-link:hover{
+    font-weight: 800;
+}
+
+/*CURSOR*/
 .cursor {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 .cursor__ball {
-  position: fixed;
-  mix-blend-mode: difference;
-  z-index: 1000;
+    position: fixed;
+    mix-blend-mode: difference;
+    z-index: 1000;
 }
 
 .cursor__ball circle {
-  fill: #f7f8fa;
+    fill: #f7f8fa;
 }
 
 .hoverable {
-  width: 0;
-  white-space: nowrap;
-  cursor: none;
-  text-decoration: none;
-  color: inherit;
+    width: 0;
+    white-space: nowrap;
+    cursor: none;
+    text-decoration: none;
+    color: inherit;
 }
 
+/*SCROLLBAR*/
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 * {
-  scrollbar-width: none;
-}
-
-h1 {
-  font-size: 3.5rem;
-  font-weight: 900; 
- margin-bottom: 1rem;  
-  line-height: 1;
-}
-
-h2 {
-  font-size: 2.0rem;
-  font-weight: 800; 
-  margin-bottom: 0.5rem; 
-  line-height: 1;
-}
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: 300; 
-  margin-bottom: 0.5rem; 
-  line-height: 1;
-}
-
-h4 {
-  font-size: 1.3rem;
-  font-weight: 300; 
-  margin-bottom: 0.5rem; 
-  line-height: 1;
-}
-
-h4 {
-  font-size: 1.2rem;
-  font-weight: 500; 
-  margin-bottom: 0.5rem; 
-  line-height: 1;
-}
-
-p{
-  padding-top: 0.5rem;
-  margin-left: 4.0rem;
+    scrollbar-width: none;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+
+/*HEADERS*/
+h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+p {
+    padding-top: 0.5rem;
+    margin-left: 4rem;
 }
