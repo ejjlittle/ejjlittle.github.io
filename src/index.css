@@ -37,7 +37,6 @@
     width: 0;
     white-space: nowrap;
     cursor: none;
-    text-decoration: none;
     color: inherit;
 }
 
@@ -85,5 +84,6 @@ h4 {
 
 p {
     padding-top: 0.5rem;
-    margin-left: 4rem;
+    font-weight: 300;
+    font-size: 1.0rem;
 }
