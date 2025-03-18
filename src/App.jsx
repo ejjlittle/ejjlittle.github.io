@@ -1,6 +1,6 @@
 import Cursor from "./components/Cursor";
-import skiingImage from "./assets/Skiing.jpg";
 import Scrollspy from "react-scrollspy";
+import FadeInSection from "./components/FadeInSection";
 
 function App() {
     return (
@@ -39,99 +39,83 @@ function App() {
                             id="about"
                             className="flex flex-col gap-16 justify-center items-center h-[90vh]"
                         >
-                            <img
-                                src={skiingImage}
-                                alt="Me skiing!"
-                                className="w-[18vw] h-[18vw] rounded-full object-cover mx-auto"
-                            />
                             <p className="text-xl">
-                                I am currently a student at the University of
-                                Notre Dame working towards my
-                                <strong>
-                                    {" "}
-                                    Bachelor's in Computer Science & Applied
-                                    Mathematics{" "}
-                                </strong>{" "}
-                                with a minor in Engineering Corporate Practice
-                                with an expected graduation date of May 2027. I
-                                am also{" "}
-                                <strong>
-                                    currently seeking a full-time internship for
-                                    summer 2025
-                                </strong>
-                                .
-                                <br />
-                                <br />
-                                Right now, I am interested in frontend
-                                development and cybersecurity. I find
-                                satisfaction in creating hight-quality, polished
-                                products and never do anything halfway.
-                                <br />
-                                <br />
-                                In my free time, I enjoy playing tennis, soccer,
-                                and basketball, as well as video games. I also
-                                have a passion for fishing, skiing and the
-                                outdoors.
+                                I'm a sophomore at the University of Notre Dame
+                                working towards my Bachelor's in Computer
+                                Science and Applied Mathematics with a minor in
+                                Engineering Corporate Practice.
                             </p>
                         </section>
+                        <FadeInSection>
+                            <section
+                                id="experience"
+                                className="flex flex-col gap-12"
+                            >
+                                <div className="flex flex-col gap-2 mt-24">
+                                    <h3>
+                                        <strong>Self-Employed</strong> &middot;
+                                        March 2018 &ndash; Present
+                                    </h3>
+                                    <h4>
+                                        <strong>
+                                            Independent Game Developer
+                                        </strong>
+                                    </h4>
+                                    <p>
+                                        Developed and maintained multiple games,
+                                        generating over $80,000 in revenue
+                                        through in-game purchases with my{" "}
+                                        <strong>
+                                            <a
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                href="https://www.roblox.com/games/3596472165/SAVES-Slime-Tycoon"
+                                                className="hoverable"
+                                            >
+                                                most popular game
+                                            </a>
+                                        </strong>{" "}
+                                        surpassing over 10 million hours of
+                                        gameplay.
+                                        <br />
+                                        <br />
+                                        Utilized Lua for scripting, Blender for
+                                        3D modeling, and Affinity Designer for
+                                        UI/UX assets. Continuously implement
+                                        updates to enhance user experience,
+                                        optimize game performance, and drive
+                                        engagement.
+                                    </p>
+                                </div>
 
-                        <section
-                            id="experience"
-                            className="flex flex-col gap-12"
-                        >
-                            <div className="flex flex-col gap-2 mt-24">
-                                <h3>
-                                    <strong>Video Game Developer</strong> |
-                                    March 2018 - Present
-                                </h3>
-                                <p>
-                                    At 13 years old, started developing video
-                                    games on Roblox. Self-taught how to code
-                                    with YouTube videos and tutorials utilizing
-                                    Blender for 3D modeling, Affinity Designer
-                                    for game icons and advertisements, and Lua
-                                    for scripting. Games have grossed over
-                                    $80,000 in revenue through in-game purchases
-                                    with my{" "}
-                                    <strong>
-                                        <a
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            href="https://www.roblox.com/games/3596472165/SAVES-Slime-Tycoon"
-                                            className="hoverable"
-                                        >
-                                            most popular game
-                                        </a>
-                                    </strong>{" "}
-                                    recently achieving over 10 million total
-                                    hours of gameplay. Continue to implement
-                                    regular updates to enhance game quality and
-                                    user experience, while using the revenue to
-                                    help pay for my education.
-                                </p>
-                            </div>
-
-                            <div className="flex flex-col gap-2">
-                                <h3>
-                                    <strong>Teaching Assistant</strong> | August
-                                    2024 - December 2024
-                                </h3>
-                                <p>
-                                    Selected by professor as 1 of
-                                    4 undergraduate TAs for
-                                    Fall 2024 Discrete Mathematics course.
-                                    Conducted weekly office
-                                    hours, facilitating constructive discussions
-                                    on topics such as logic, set theory, graph
-                                    theory, and algorithms. Graded all
-                                    homework sets, quizzes, and exams in a
-                                    timely manner. Maintained
-                                    professional communication with both
-                                    students and the professor, ensuring clear
-                                    and respectful interactions.
-                                </p>
-                            </div>
-                        </section>
+                                <div className="flex flex-col gap-2">
+                                    <h3>
+                                        <strong>
+                                            University of Notre Dame
+                                        </strong>{" "}
+                                        &middot; August 2024 &ndash; December
+                                        2024
+                                    </h3>
+                                    <h4>
+                                        <strong>
+                                            Discrete Mathematics Teaching
+                                            Assistant
+                                        </strong>
+                                    </h4>
+                                    <p>
+                                        Conducted weekly office hours,
+                                        facilitating constructive discussions on
+                                        topics such as logic, set theory, graph
+                                        theory, and algorithms. Graded all
+                                        homework sets, quizzes, and exams in a
+                                        timely manner. Maintained professional
+                                        communication with both students and the
+                                        professor, ensuring clear and respectful
+                                        interactions.
+                                    </p>
+                                </div>
+                            </section>
+                        </FadeInSection>
 
                         <section
                             id="projects"
