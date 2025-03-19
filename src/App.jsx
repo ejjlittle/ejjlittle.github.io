@@ -1,17 +1,21 @@
 import Cursor from "./components/Cursor";
 import Scrollspy from "react-scrollspy";
 import FadeInSection from "./components/FadeInSection";
+import React, { useState } from "react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 function App() {
+    const [isLoaded, setIsLoaded] = useState(false);
+
     return (
         <div>
             <Cursor />
             <div className="min-h-screen max-w-screen-xl">
-                <div className="flex w-screen justify-between bg-neutral-100">
-                    <div className="sticky top-0 text-neutral-100 bg-neutral-950 pl-24 flex flex-col max-h-screen pt-24 min-w-[700px]">
+                <div className="flex w-screen justify-between bg-white">
+                    <div className="sticky top-0 text-white bg-black pl-24 flex flex-col max-h-screen pt-24 min-w-[35vw]">
                         <h2>Hi, I'm</h2>
                         <h1 className="hoverable">ETHAN LITTLE,</h1>
-                        <h3>student at University of Notre Dame</h3>
+                        <h3>CS at the University of Notre Dame</h3>
 
                         <Scrollspy
                             items={["about", "experience", "projects"]}
@@ -33,18 +37,36 @@ function App() {
                             </a>
                         </Scrollspy>
                     </div>
+                    <div className="sticky top-0 overflow-hidden flex w-[30vw] h-screen justify-center items-center">
+                        <DotLottieReact
+                            src="https://lottie.host/54e1902b-f93f-4c29-8366-a50835f7ab81/u12nYXu8P3.lottie"
+                            loop
+                            autoplay
+                            speed={1}
+                            className="absolute w-[100vh] h-[100vh] grayscale rotate-270"
+                        />
+                    </div>
 
-                    <div className="flex flex-col text-neutral-950 px-24">
+                    <div className="flex flex-col text-black px-24">
                         <section
                             id="about"
-                            className="flex flex-col gap-16 justify-center items-center h-[90vh]"
+                            className="flex flex-col justify-center h-[90vh]"
                         >
-                            <p className="text-xl">
+                            <h3 className="leading-relaxed">
                                 I'm a sophomore at the University of Notre Dame
                                 working towards my Bachelor's in Computer
                                 Science and Applied Mathematics with a minor in
                                 Engineering Corporate Practice.
-                            </p>
+                            </h3>
+
+                            <a
+                                href="/path-to-your-file.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                 className="pt-8 hoverable hover:font-extrabold"
+                            >
+                                VIEW RÉSUMÉ &#8594;
+                            </a>
                         </section>
                         <FadeInSection>
                             <section
