@@ -2,20 +2,17 @@ import Cursor from "./components/Cursor";
 import Scrollspy from "react-scrollspy";
 import FadeInSection from "./components/FadeInSection";
 import React, { useState } from "react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 function App() {
-    const [isLoaded, setIsLoaded] = useState(false);
-
     return (
         <div>
             <Cursor />
             <div className="min-h-screen max-w-screen-xl">
                 <div className="flex w-screen justify-between bg-white">
-                    <div className="sticky top-0 text-white bg-black pl-24 flex flex-col max-h-screen pt-24 min-w-[35vw]">
+                    <div className="sticky top-0 text-white bg-black pl-24 flex flex-col max-h-screen pt-24 min-w-[42vw]">
                         <h2>Hi, I'm</h2>
                         <h1 className="hoverable">ETHAN LITTLE,</h1>
-                        <h3>CS at the University of Notre Dame</h3>
+                        <h5>CS at the University of Notre Dame</h5>
 
                         <Scrollspy
                             items={["about", "experience", "projects"]}
@@ -37,33 +34,24 @@ function App() {
                             </a>
                         </Scrollspy>
                     </div>
-                    <div className="sticky top-0 overflow-hidden flex w-[30vw] h-screen justify-center items-center">
-                        <DotLottieReact
-                            src="https://lottie.host/54e1902b-f93f-4c29-8366-a50835f7ab81/u12nYXu8P3.lottie"
-                            loop
-                            autoplay
-                            speed={1}
-                            className="absolute w-[100vh] h-[100vh] grayscale rotate-270"
-                        />
-                    </div>
 
-                    <div className="flex flex-col text-black px-24">
+                    <div className="flexflex-col text-black px-24">
                         <section
                             id="about"
-                            className="flex flex-col justify-center h-[90vh]"
+                            className="flex flex-col px-12 justify-center h-[90vh]"
                         >
-                            <h3 className="leading-relaxed">
+                            <h5 className="leading-relaxed">
                                 I'm a sophomore at the University of Notre Dame
                                 working towards my Bachelor's in Computer
                                 Science and Applied Mathematics with a minor in
                                 Engineering Corporate Practice.
-                            </h3>
+                            </h5>
 
                             <a
                                 href="/path-to-your-file.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                 className="pt-8 hoverable hover:font-extrabold"
+                                className="pt-8 hoverable hover:font-extrabold"
                             >
                                 VIEW RÉSUMÉ &#8594;
                             </a>
@@ -71,18 +59,16 @@ function App() {
                         <FadeInSection>
                             <section
                                 id="experience"
-                                className="flex flex-col gap-12"
+                                className="flex flex-col gap-12 pt-24 h-[90vh]"
                             >
-                                <div className="flex flex-col gap-2 mt-24">
-                                    <h3>
-                                        <strong>Self-Employed</strong> &middot;
-                                        March 2018 &ndash; Present
-                                    </h3>
-                                    <h4>
-                                        <strong>
-                                            Independent Game Developer
-                                        </strong>
-                                    </h4>
+                                <div className="flex flex-col gap-2">
+                                    <div className="flex flex-row gap-2">
+                                        <h3>Self-Employed</h3>
+                                        <h3>&middot;</h3>
+                                        <h4>March 2018 &ndash; Present</h4>
+                                    </div>
+
+                                    <h5>Independent Game Developer</h5>
                                     <p>
                                         Developed and maintained multiple games,
                                         generating over $80,000 in revenue
@@ -111,19 +97,16 @@ function App() {
                                 </div>
 
                                 <div className="flex flex-col gap-2">
-                                    <h3>
-                                        <strong>
-                                            University of Notre Dame
-                                        </strong>{" "}
-                                        &middot; August 2024 &ndash; December
-                                        2024
-                                    </h3>
-                                    <h4>
-                                        <strong>
-                                            Discrete Mathematics Teaching
-                                            Assistant
-                                        </strong>
-                                    </h4>
+                                    <div className="flex flex-row gap-2">
+                                        <h3>University of Notre Dame</h3>
+                                        <h3>&middot;</h3>
+                                        <h4>
+                                            August 2024 &ndash; December 2024
+                                        </h4>
+                                    </div>
+                                    <h5>
+                                        Discrete Mathematics Teaching Assistant
+                                    </h5>
                                     <p>
                                         Conducted weekly office hours,
                                         facilitating constructive discussions on
@@ -139,10 +122,84 @@ function App() {
                             </section>
                         </FadeInSection>
 
-                        <section
-                            id="projects"
-                            className="flex flex-col h-screen"
-                        ></section>
+                        <FadeInSection>
+                            <section
+                                id="projects"
+                                className="flex flex-col gap-12 pt-24 mb-24"
+                            >
+                                <div className="flex flex-col gap-2">
+                                    <h3>
+                                        <strong>
+                                            <a
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                href="https://github.com/ejjlittle/ev-betting-model"
+                                                className="hoverable"
+                                            >
+                                                NBA Betting Model &#8594;
+                                            </a>
+                                        </strong>
+                                    </h3>
+                                    <p>
+                                        Constructed a full-stack web app that
+                                        scrapes NBA player bets, logs the bets,
+                                        and tracks results. Implemented an
+                                        effective positive expected value
+                                        betting strategy based on outlier lines
+                                        across major sportsbooks.
+                                    </p>
+                                    <img
+                                        src="../../EV-Betting-Model.png"
+                                        alt="EV-Betting-Model"
+                                        class="w-full rounded-2xl grayscale h-auto"
+                                    />
+                                    <div className="flex flex-wrap gap-2">
+                                        <span className="skill">
+                                            AWS Lambda
+                                        </span>
+                                        <span className="skill">
+                                            API Gateway
+                                        </span>
+                                        <span className="skill">S3</span>
+                                        <span className="skill">
+                                            CloudFront
+                                        </span>
+                                        <span className="skill">MongoDB</span>
+                                        <span className="skill">Python</span>
+                                        <span className="skill">
+                                            TypeScript
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col gap-2">
+                                    <h3>
+                                        <strong>
+                                            <a
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                href="https://github.com/ejjlittle/ejjlittle.github.io"
+                                                className="hoverable"
+                                            >
+                                                Personal Website &#8594;
+                                            </a>
+                                        </strong>
+                                    </h3>
+                                    <p>
+                                        Built platform for visitors to learn
+                                        more about my journey in tech, my work,
+                                        and my interests. Features include a
+                                        responsive layout, interactive elements,
+                                        and easy navigation.
+                                    </p>
+                                    <div className="flex flex-wrap gap-2">
+                                        <span className="skill">HTML</span>
+                                        <span className="skill">React</span>
+                                        <span className="skill">CSS</span>
+                                    </div>
+                                </div>
+                            </section>
+                        </FadeInSection>
                     </div>
                 </div>
             </div>
